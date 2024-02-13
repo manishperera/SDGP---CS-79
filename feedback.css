@@ -3,8 +3,7 @@
 /* Styling for the feedback container */
 body {
     
-    background: url('feed.jpg') center/cover no-repeat fixed; /* Replace 'background-image.jpg' with the path to your actual background image */
-}
+    background: url('feed.jpg') center/cover no-repeat fixed;
 
 .feedback-container {
     padding: 20px;
