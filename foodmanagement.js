@@ -56,7 +56,6 @@ function submitForgotPasswordForm() {
     function resendCode() {
         
         alert("Code resent! Check your email or phone.");
-        // Optionally, you can show a success message or handle the resend process as needed
     }
 
     function submitPinEntryForm() {
