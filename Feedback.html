@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="feedback.css">
+    <link rel="stylesheet" href="navigation.css"> <!-- Include your common stylesheet if needed -->
+</head>
+<body>
+
+<!-- NAVIGATION SECTION -->
+<header class="navbar">
+    <nav class="flex">
+        <img id="logo" src="logo zero waste.png" alt=" logo">
+        <ul>
+            <li><a href="food waste management.html">Home</a></li>
+            <li><a href="sellerproduct.html">Products</a></li>
+            <li><a href="../Quiz/quiz.html">Resources</a></li>
+            <li><a href="sellerdonation.html">Donation</a></li>
+            <li><a href="feedback.html" class="active">Feedback</a></li>
+            <li><a href="seller_aboutus.html">About us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- FEEDBACK SECTION -->
+<div class="container feedback-container">
+    <h2>Give Us Your Feedback</h2>
+    <form id="feedbackForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Your Feedback:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+    </form>
+</div>
+
+	<!-- FOOTER SECTION -->
+    <div class="footerpart">
+        <div class="firstrow">
+            <div class="firstcolumn">
+                <ul id="ceylonicon">
+                    <li><a><img src="logo zero waste.png" width="200" height="180" alt="ceylo logo"></a></li>
+                </ul>
+            </div>
+            <div class="socialMediaIcon">
+                <a href="https://www.facebook.com/profile.php?id=61555638793654&mibextid=ZbWKwL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" height="40" width="45" alt="Facebook logo"></a>
+                <a href="https://twitter.com/iitsrilanka?lang=en"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png" height="40" width="45" alt="Twitter logo"></a>
+                <a href="https://www.instagram.com/iitlife/?hl=en"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png" height="40" width="45" alt="Instagram logo"></a>
+                <a href="https://www.youtube.com/channel/UC02DMFclK9vaEdOIKSiaNkA"><img src="https://img.freepik.com/premium-vector/red-youtube-logo-social-media-logo_197792-1803.jpg" height="40" width="45" alt="Youtube logo"></a>
+            </div>
+            <div class="Secondcolumn">
+                <ul id="footerNav">
+                    <li><span style="margin-bottom: 20px;font-weight:bold;font-size:22px;">NAVIGATE</span></li>
+                    <li>Contact us-0762231234</li>
+                    <li>Email-zerowaste@gmail.com</li>
+                    
+                    <li>Sri lanka</li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <p>©Copyright ZEROWASTE 2024 All Rights Reserved.</p>
+                
+            </div>
+        </div>
+        <br><br>
+        
+    </div>
+    </footer>
+   
+    
+</body>
+</html>
