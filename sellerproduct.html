@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="productseller.css">
+   
+</head>
+<body>
+<!-- NAVIGATION SECTION -->
+<header class="navbar">
+    <nav class="flex">
+        <img id="logo" src="logo zero waste.png" alt=" logo">
+        <div class="nav-links">
+            <ul>
+                <li><a href="food waste management.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="../Quiz/quiz.html">Resources</a></li>
+                <li><a href="sellerdonation.html">Donation</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="seller_aboutus.html">About us</a></li>
+            </ul>
+        </div>
+        <div class="search-container">
+            <form action="#" method="GET">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+</header>
+
+<!-- PRODUCT OPTIONS SECTION -->
+<div class="container product-options-container">
+    <h2>Select a Product Category</h2>
+    <div class="options">
+        <div class="option" id="foodOption">
+            <button class="category-button" onclick="showItems('food')">Food</button>
+        </div>
+        <div class="option" id="wasteOption">
+            <button class="category-button" onclick="showItems('waste')">Waste</button>
+        </div>
+    </div>
+    <div id="itemsContainer"></div>
+</div>
+
+<script src="foodmanagement.js"></script> <!-- Include your script if needed -->
+
+<!-- FOOTER SECTION -->
+<div class="footerpart">
+    <div class="firstrow">
+        <div class="firstcolumn">
+            <ul id="ceylonicon">
+                <li><a><img src="logo zero waste.png" width="200" height="180" alt="ceylo logo"></a></li>
+            </ul>
+        </div>
+        <div class="socialMediaIcon">
+            <a href="https://www.facebook.com/profile.php?id=61555638793654&mibextid=ZbWKwL"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" height="40" width="45" alt="Facebook logo"></a>
+            <a href="https://twitter.com/iitsrilanka?lang=en"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png" height="40" width="45" alt="Twitter logo"></a>
+            <a href="https://www.instagram.com/iitlife/?hl=en"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png" height="40" width="45" alt="Instagram logo"></a>
+            <a href="https://www.youtube.com/channel/UC02DMFclK9vaEdOIKSiaNkA"><img src="https://img.freepik.com/premium-vector/red-youtube-logo-social-media-logo_197792-1803.jpg" height="40" width="45" alt="Youtube logo"></a>
+        </div>
+        <div class="Secondcolumn">
+            <ul id="footerNav">
+                <li><span style="margin-bottom: 20px;font-weight:bold;font-size:22px;">NAVIGATE</span></li>
+                <li>Contact us-0762231234</li>
+                <li>Email-zerowaste@gmail.com</li>
+                <li>Sri lanka</li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <p>©Copyright ZEROWASTE 2024 All Rights Reserved.</p>
+        </div>
+    </div>
+    <br><br>
+</div>
+</footer>
+
+</body>
+</html>

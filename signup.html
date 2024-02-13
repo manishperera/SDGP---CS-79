@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css"> <!-- You can link to your own stylesheet if needed -->
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-section">
+            <h3>Elavate Your Business,<br>Sign Up And Thirve With Us..</h3>
+            <p>WE Are:</p>
+
+            <input type="radio" id="restaurant" name="accountType" value="restaurant">
+            <label for="restaurant">Restaurant</label>
+
+            <input type="radio" id="hotel" name="accountType" value="hotel">
+            <label for="hotel">Hotel</label>
+
+            <input type="radio" id="groceryStore" name="accountType" value="groceryStore">
+            <label for="groceryStore">Grocery Store</label>
+
+            <input type="radio" id="houseResident" name="accountType" value="houseResident">
+            <label for="houseResident">House Resident</label>
+        </div>
+
+        <div class="right-section">
+            <h3>Create an Account</h3>
+            <form id="signupForm">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <br>
+
+                <button type="button" onclick="submitSignUp()">Sign Up</button>
+            </form>
+
+            <p>Already have an account?</p>
+            <p><a href="buyerlogin.html">Buyer Log In</a> | <a href="sellerlogin.html">Seller Log In</a></p>
+        </div>
+    </div>
+
+    <script src="foodmanagement.js"></script> <!-- You can link to your own JavaScript file if needed -->
+
+</body>
+</html>

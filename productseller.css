@@ -1,0 +1,176 @@
+/* Add this to productseller.css */
+
+/* navigation.css */
+.navbar {
+    background-color:rgb(30, 87, 30);
+    color: white;
+    padding: 20px;
+}
+
+.navbar .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.navbar #logo {
+    width: 200px; /* Adjust the logo size as needed */
+}
+
+.navbar .nav-links {
+    margin-top: 20px; /* Add margin at the top of the navigation links for spacing */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.navbar a.active {
+    border-bottom: 2px solid white;
+}
+
+/* Style for active link (optional) */
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Search container styling */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust the margin at the top of the search container for spacing */
+}
+
+.search-container form {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-container button {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add styling for the footer section */
+.footerpart {
+    background-color:rgb(30, 87, 30);
+    color: white;
+    padding: 20px;
+}
+
+.firstrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.firstcolumn img {
+    width: 200px; /* Adjust the logo size as needed */
+}
+
+.socialMediaIcon {
+    display: flex;
+}
+
+.socialMediaIcon a {
+    margin-right: 10px; /* Adjust the spacing between social media icons */
+}
+
+.Secondcolumn #footerNav {
+    list-style: none;
+    padding: 0;
+}
+
+.Secondcolumn #footerNav li {
+    margin-bottom: 10px; /* Adjust the spacing between navigation links */
+}
+
+.bottom {
+    margin-top: 20px; /* Adjust the spacing between the bottom content and the rest of the footer */
+}
+
+.btn1 {
+    background-color: #fff; /* Adjust the button background color */
+    color: #333; /* Adjust the button text color */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn1:hover {
+    background-color: #ddd; /* Adjust the button background color on hover */
+}
+/* Add this to productseller.css */
+
+/* Add styling for product options */
+.product-options-container {
+    text-align: center;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.option {
+    width: 48%; /* Adjust the width of each option as needed */
+    text-align: center;
+}
+
+.option a {
+    text-decoration: none;
+    color: #333;
+}
+
+.option img {
+    width: 100px; /* Adjust the width of the icon as needed */
+    height: 100px; /* Adjust the height of the icon as needed */
+    margin-bottom: 10px;
+}
+
+.option p {
+    font-size: 18px;
+}
+
+/* Add styling for category buttons */
+.category-button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%; /* Make the button fill the container width */
+}
+
+.category-button:hover {
+    background-color: #555;
+}

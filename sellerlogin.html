@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Login</title>
+    <link rel="stylesheet" href="buyerseller.css">
+</head>
+<body>
+
+    <div class="container">
+        <h3>Welcome, Sellers!<br>Unlock Success as you Log in with Confidence.</h3>
+        
+        <form id="sellerLoginForm">
+            <input type="text" id="sellerId" name="sellerId" placeholder="Seller ID" required>
+            <br> <!-- Add a line break to display the elements on separate lines -->
+
+            <input type="password" id="sellerPassword" name="sellerPassword" placeholder="Password" required>
+            <br> <!-- Add a line break to display the elements on separate lines -->
+
+            <a href="#">Forgot Password?</a>
+
+            <button type="button" onclick="loginSeller()">Log In</button>
+        </form>
+    </div>
+
+    <script src="foodmanagement.js"></script>
+    <script>
+        // Retrieve the topic from the query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const topic = urlParams.get('topic');
+
+        // Set the topic as the page title with line break
+        if (topic) {
+            document.getElementById('pageTitle').innerHTML = 'Seller Login<br>' + decodeURIComponent(topic);
+        }
+    </script>
+</body>
+</html>

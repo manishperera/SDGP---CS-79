@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('https://img.freepik.com/premium-photo/composition-with-variety-raw-organic-vegetables-black-black-background_916191-17449.jpg?w=740'); /* Replace with the actual path to your background image */
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(7px);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; /* Adjust the width of the container as needed */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.left-section {
+    text-align: left;
+    width: 40%; /* Adjust the width of the left section as needed */
+    padding: 20px;
+}
+
+.right-section {
+    text-align: center;
+    width: 50%; /* Adjust the width of the right section as needed */
+}
+
+h3 {
+    font-size: 44px;
+    color: white;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.left-section input[type="radio"] {
+    vertical-align: middle;
+    margin-right: 5px; /* Add some space between the radio button and the label */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50; /* Green color, adjust as needed */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green color on hover */
+}
+
+p {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+a {
+    color: #007BFF; /* Blue color for the link */
+    text-decoration: none;
+}

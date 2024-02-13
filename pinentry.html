@@ -1,0 +1,34 @@
+<!-- pin-entry.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIN Entry</title>
+    <link rel="stylesheet" href="buyerseller.css">
+</head>
+<body>
+
+    <div class="container">
+        <h3>Enter Pin,<br>Unlock Possibilities,<br>And Journey Seamlessly Forward</h3>
+        
+        <form id="pinEntryForm" onsubmit="submitPinEntryForm(); return false;">
+            <div class="pin-input-container">
+                <input type="text" id="pin1" name="pin1" class="pin-input" maxlength="1" required>
+                <input type="text" id="pin2" name="pin2" class="pin-input" maxlength="1" required>
+                <input type="text" id="pin3" name="pin3" class="pin-input" maxlength="1" required>
+                <input type="text" id="pin4" name="pin4" class="pin-input" maxlength="1" required>
+            </div>
+            <br>
+            <button type="submit">Verify</button>
+            
+            <p id="codeNotReceived" style="color: red;">Didn't receive the code? <a href="#" onclick="resendCode()">Resend</a></p>
+        </form>
+    </div>
+
+    <script src="foodmanagement.js"></script>
+
+
+</body>
+</html>

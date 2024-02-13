@@ -1,0 +1,34 @@
+/* Add styling for the seller_aboutus container */
+.aboutus-container {
+    position: relative;
+    background-image: url('ingredients-making-guakamole.jpg'); /* Adjust the path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutus-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(7px); /* Adjust the blur value as needed */
+}
+
+.aboutus-content {
+    color: white;
+    font-size: xx-large;
+    padding: 20px;
+    text-align: center; /* Center align text */
+    position: relative;
+    z-index: 1;
+}
