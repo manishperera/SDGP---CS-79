@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seller Home Page - Waste</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  .rounded-circle {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  .seller-info {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .waste-items-list {
+    margin-top: 20px;
+  }
+  .modal-content input,
+  .modal-content select {
+    margin-bottom: 10px;
+  }
+  .card {
+    margin: 10px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="top-menu bg-dark p-2 text-light">
+  <div class="container d-flex justify-content-between">
+    <span>ZeroWaste</span>
+    <nav>
+      <a href="#products" class="text-light mx-2">Products</a>
+      <a href="#about" class="text-light mx-2">About</a>
+      <a href="#resources" class="text-light mx-2">Resources</a>
+      <a href="#donations" class="text-light mx-2">Donations</a>
+      <a href="#feedback" class="text-light mx-2">Feedback</a>
+    </nav>
+  </div>
+</div>
+
+<div class="seller-info">
+  <img src="path-to-seller-image.jpg" alt="Seller Store" class="rounded-circle">
+  <h2>Lucky Grocery Store</h2>
+</div>
+
+<?php
+// Assuming you have a session started and a database connection file named 'db.php'
+include 'db.php'; // Include your database connection file
+
+// Start session and check if seller is logged in
+session_start();
+if (!isset($_SESSION['seller_id'])) {
+    // Redirect to login page if not logged in
+    header('Location: login.php');
+    exit;
+}
+
+$seller_id = $_SESSION['seller_id']; // The logged in seller's ID
+// Fetch the waste items from the database
+$waste_items = []; // Placeholder for fetched waste items
+
+try {
+    $stmt = $pdo->prepare("SELECT * FROM waste WHERE seller_id = :seller_id");
+    $stmt->execute(['seller_id' => $seller_id]);
+    $waste_items = $stmt->fetchAll();
+} catch (PDOException $e) {
+    // Handle error
+    echo "Error: " . $e->getMessage();
+}
+?>
+
+<div class="container waste-items-list">
+  <?php foreach ($waste_items as $item): ?>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><?php echo htmlspecialchars($item['name']); ?></h5>
+        <p class="card-text"><?php echo htmlspecialchars($item['weight']); ?> kg - <?php echo htmlspecialchars($item['price']); ?> LKR/kg</p>
+        <p class="card-text"><small class="text-muted">Posted on <?php echo htmlspecialchars($item['created_at']); ?></small></p>
+      </div>
+    </div>
+  <?php endforeach; ?>
+</div>
+
+<div class="container text-center mt-4">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addWasteModal">
+    Add More Items
+  </button>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

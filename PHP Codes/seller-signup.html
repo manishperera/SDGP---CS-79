@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seller Signup</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+  }
+  .bg-image {
+    background-image: url('your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+  .signup-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .signup-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 600px;
+  }
+  .radio-group {
+    margin-bottom: 1rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-image">
+  <div class="signup-container">
+    <div class="signup-box">
+      <h2 class="text-center mb-4">Elevate your business: Sign up and thrive with us!</h2>
+      <form action="seller-signup.php" method="post">
+        <div class="form-group row">
+          <div class="col">
+            <label>We are,</label>
+            <div class="radio-group">
+              <input type="radio" name="business_type" value="Restaurant" required> Restaurant<br>
+              <input type="radio" name="business_type" value="Hotel" required> Hotel<br>
+              <input type="radio" name="business_type" value="Grocery Stores" required> Grocery Stores<br>
+              <input type="radio" name="business_type" value="House/Resident" required> House/Resident
+            </div>
+          </div>
+          <div class="col">
+            <input type="email" class="form-control" name="email" placeholder="Email" required>
+            <input type="text" class="form-control" name="seller_name" placeholder="Seller Name" required>
+            <input type="text" class="form-control" name="phone_number" placeholder="Phone Number" required>
+            <input type="text" class="form-control" name="address" placeholder="Address" required>
+            <input type="password" class="form-control" name="password" placeholder="Password" required>
+            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required>
+            <button type="submit" class="btn btn-success btn-block mt-3">Signup</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

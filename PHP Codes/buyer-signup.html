@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buyer Signup</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+  }
+  .bg-image {
+    height: 100%; 
+    background-image: url('https://img.freepik.com/free-photo/bottom-view-fresh-vegetables-red-greeen-bell-peppers-cherry-tomatoes-dill-parsley-tomatoes-dark-surface-with-copy-place_140725-102757.jpg?w=996&t=st=1708460991~exp=1708461591~hmac=8d057986c9d824ea366d65189817730bd2a523381f0befed3afef9639859aabb');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+  }
+  .signup-container {
+    height: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .signup-box {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 10%;
+    margin-top: 6%;
+    width: 400px;
+    max-width: 80%;
+  }
+  .btn-success {
+    background-color: #5cb85c;
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-image">
+  <div class="signup-container">
+    <div class="signup-box">
+      <h2 class="text-center mb-4">Join now, unlock a world of possibilities for you!</h2>
+      <form action="buyer-signup.php" method="post">
+        <div class="form-group">
+          <input type="email" class="form-control" name="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="user_name" placeholder="User Name" required>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="phone_number" placeholder="Phone Number" required>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" name="password" placeholder="Password" required>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required>
+        </div>
+        <button type="submit" class="btn btn-success btn-block">Signup</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
