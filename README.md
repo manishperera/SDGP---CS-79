@@ -4,7 +4,7 @@ Through our innovative approach, we bridge the gap between sellers and buyers, f
 
 # Zero Waste - A Web application to support food waste management
 
-# Group Members : 
+# Group Members :
 
 - [@manishperera](https://www.github.com/octokatherine)
 - [@ayaniranasinghe](https://github.com/ayaniranasinghe)
