@@ -6,7 +6,7 @@
   	include 'app/db.conn.php';
 
   	include 'app/helpers/user.php';
-  	include 'app/helpers/chat.php';
+  	include 'app/helpers/chat.php'; 
   	include 'app/helpers/opened.php';
 
   	include 'app/helpers/timeAgo.php';
