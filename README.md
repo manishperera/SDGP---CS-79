@@ -10,4 +10,4 @@ Through our innovative approach, we bridge the gap between sellers and buyers, f
 - [@ayaniranasinghe](https://github.com/ayaniranasinghe)
 - [@OmiraGunasekara](https://github.com/OmiraGunasekara)
 - [@mohammedyoosuf](https://github.com/mohammedyoosuf)
-- [@ShashikaAmandi](https://github.com/ShashikaAmandi)
+- [@ShashikaAmandi](https://github.com/ShashikaAmandi) 
