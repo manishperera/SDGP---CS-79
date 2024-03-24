@@ -1,0 +1,3 @@
+Food - Expired Canned Goods: 90.00 kg for the next day
+Waste - Some Waste: 106.00 kg for the next day
+Food - Organic Apple Waste: 185.00 kg for the next day
