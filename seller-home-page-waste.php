@@ -21,6 +21,13 @@ if (!isset($_SESSION["email"])) {
 <title>Seller Home Page - Waste</title>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
 <style>
+  body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://cdn.ning.com/wp-content/uploads/2019/05/create-food-website.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
   .rounded-circle {
     width: 100px;
     height: 100px;
@@ -29,6 +36,7 @@ if (!isset($_SESSION["email"])) {
   .seller-info {
     text-align: center;
     margin-top: 20px;
+    color: azure;
   }
   .waste-items-list {
     margin-top: 20px;
@@ -46,6 +54,7 @@ if (!isset($_SESSION["email"])) {
             background-position: center;
             padding-bottom: 50px;
             position: relative;
+            border-bottom: 3px solid #4CAF50;
         }
         .top-menu a {
             float: left;
