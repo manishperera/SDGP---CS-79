@@ -11,6 +11,7 @@
     margin: 0;
   }
   .bg-image {
+    background-size: cover;
     background-image: url('https://cdn.ning.com/wp-content/uploads/2019/05/create-food-website.jpg');
     background-size: cover;
     background-position: center;
@@ -30,18 +31,26 @@
     width: 400px;
     text-align: center;
   }
-  /* Style for input fields */
-  .verification-input input[type="text"] {
-    margin: 0 10px;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    border-radius: 50%;
-    border:  black; 
-    font-size: 24px;
-    line-height: 50px;
+  /* Change border color of input field */
+  .form-control {
+    border-color: black;
   }
 
+  .verification-input input {
+    margin: 0 10px; 
+    width: 50px; 
+    height: 50px; 
+    text-align: center;
+    border-radius: 50%; 
+    border: 2px solid #ddd; 
+    font-size: 24px; 
+    line-height: 50px; 
+  }
+
+  .verification-input input {
+    margin: 0 5px;
+    text-align: center;
+  }
   .btn-primary {
     background-color: #5cb85c;
     border: none;
@@ -60,8 +69,8 @@
 <div class="bg-image">
   <div class="verification-container">
     <div class="verification-box">
-      <h2 class="text-center mb-4">Enter code, Unlock Possibilities, and Journey Seamlessly Forward.</h2>
-      <h4 class="text-center mb-4">Enter Verification Code</h4>
+      <h2 class="text-center mb-4">Enter Code, Unlock Possibilities, And Journey Seamlessly Forward.</h2>
+      <h2 class="text-center mb-4">Enter Verification Code</h2>
       <form action="verify_code.php" method="post">
           <div class="form-group">
               <input type="text" name="verification_code" placeholder="Enter your verification code" required class="form-control">
