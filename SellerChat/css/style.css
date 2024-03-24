@@ -60,9 +60,9 @@ small {
 }
 
 /* Handle */
-/* *::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   background: #aaa;
-} */
+}
 
 /* Handle on hover */
 *::-webkit-scrollbar-thumb:hover {
