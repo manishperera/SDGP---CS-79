@@ -12,28 +12,33 @@
   }
   .bg-image {
     height: 100%; 
-    background-image: url('https://img.freepik.com/free-photo/various-vegetables-black-table-with-space-message_1220-616.jpg?w=1060&t=st=1711199448~exp=1711200048~hmac=424d84a0e95ed8649330086f707e23d7e371613e4601947871dc21f5ffc27c64');
+    background-image: url('https://cdn.ning.com/wp-content/uploads/2019/05/create-food-website.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    display: flex;
     justify-content: center;
     align-items: center;
   }
   .signup-container {
     height: 80%;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
   }
   .signup-box {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: white;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-left: 10%;
-    margin-top: 6%;
     width: 400px;
     max-width: 80%;
+  }
+  /* Style for input fields */
+  .signup-box input[type="email"],
+  .signup-box input[type="text"],
+  .signup-box input[type="password"] {
+    border-color: black; /* Change the border color */
   }
   .btn-success {
     background-color: #5cb85c;
@@ -45,7 +50,7 @@
 <div class="bg-image">
   <div class="signup-container">
     <div class="signup-box">
-      <h2 class="text-center mb-4">Join now, unlock a world of possibilities for you!</h2>
+      <h2 class="text-center mb-4">Join Now, Unlock a World of Possibilities For You!</h2>
       <form action="buyer-signup.php" method="post">
         <div class="form-group">
           <input type="email" class="form-control" name="email" placeholder="Email" required>
