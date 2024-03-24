@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zero Waste - Seller Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .top-menu a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .category-buttons button {
+            margin-right: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        .food-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+        .food-item img {
+            width: 100%;
+            height: auto;
+        }
+        .modal-content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-menu">
+        <img src="image/logo.png" alt="ZeroWaste Logo" class="logo">
+            <a class="active" href="buyers-home-page.php">Products</a>
+            <a href="about.html">About</a>
+            <a href="resource.html">Resources</a>
+            <a href="feedback.php">Feedback</a>
+            <br> <br> <br> <br> <br> <br>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+
+<div class="container">
+    <div class="search-bar">
+        <input type="text" placeholder="Search">
+    </div>
+    <div class="category-buttons">
+        <button>Food</button>
+        <button>Waste</button>
+    </div>
+
+    <main>
+        <div class="food-grid">
+            <div class="food-item">
+                <img src="noodles.jpg" alt="Noodles">
+                <div>Noodles</div>
+                <div>250.00 LKR</div>
+            </div>
+        </div>
+        
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#donationModal">
+            Donate
+        </button>
+        
+        <div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="donationModalLabel">Donate Food</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="donationForm">
+                            <div class="form-group">
+                                <label for="foodName">Food Name</label>
+                                <input type="text" class="form-control" id="foodName" name="foodName">
+                            </div>
+                            <div class="form-group">
+                                <label for="quantity">Quantity</label>
+                                <input type="number" class="form-control" id="quantity" name="quantity">
+                            </div>
+                            <div class="form-group">
+                                <label for="expiryDate">Expiry Date</label>
+                                <input type="date" class="form-control" id="expiryDate" name="expiryDate">
+                            </div>
+                            <button type="submit" class="btn btn-success">Submit Donation</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
