@@ -1,0 +1,2 @@
+Predicted waste for 2024-02-29: 81.11111111111097 kg
+Predicted waste for 2024-03-02: -75.11111111111131 kg
