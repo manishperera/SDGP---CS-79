@@ -8,7 +8,6 @@ if (isset($_SESSION['username'])) {
         PDO::ATTR_EMULATE_PREPARES => false,
     ]);
 
-   
     ?>
 
     <!DOCTYPE html>
@@ -17,7 +16,8 @@ if (isset($_SESSION['username'])) {
     <meta charset="UTF-8">
     <title>Zero Waste - Buyer Home Page</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; box-sizing: border-box; background-image: ; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; box-sizing: border-box; background-image: url('https://cdn.ning.com/wp-content/uploads/2019/05/create-food-website.jpg'); 
+        background-size: cover; background-position: center; ; }
         .container { width: 80%; margin: 0 auto; }
         .item, .food-item { background-color: #e8f5e9; margin-bottom: 20px; padding: 10px; cursor: pointer; }
         .item { border-radius: 8px; display: flex; align-items: center; }
@@ -33,6 +33,7 @@ if (isset($_SESSION['username'])) {
             background-position: center;
             padding-bottom: 50px;
             position: relative;
+            border-bottom: 3px solid #4CAF50;
         }
         .top-menu a {
             float: left;
@@ -195,6 +196,7 @@ if (isset($_SESSION['username'])) {
     </style>
 </head>
     <body>
+
         <div class="top-menu">
         <a href="buyer-login.html" class="buyer-login">Buyer Login</a>
         <a href="seller-login.html" class="seller-login">Seller Login</a>
@@ -266,8 +268,8 @@ if (isset($_SESSION['username'])) {
                     $isDonated = $row['is_donation'] == '1' || $row['is_donation'] == true;
                 ?>
                     <div class='item' onclick="showModal(<?=htmlspecialchars(json_encode($row))?>)">
-                        <!-- Replace the src attribute with your image URL -->
-                        <img src='https://example.com/path/to/your/image.jpg' alt='Image' width='100' height='100' style="border-radius: 8px;">
+                       
+                        <img src='image/2771401.png' alt='Image' width='100' height='100' style="border-radius: 8px;">
                         <div class='basic-info'>
                             <div class='item-name'><?php echo htmlspecialchars($row['name']); ?></div>
                             <div class='item-weight'><?php echo htmlspecialchars($row['weight']); ?> kg</div>
@@ -334,5 +336,3 @@ if (isset($_SESSION['username'])) {
 <?php
 }
 ?>
-
-
