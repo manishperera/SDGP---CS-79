@@ -2,31 +2,15 @@
 
 session_start();
 
+require __DIR__ . '/app/dbConnection.php';
+
 if (!isset($_SESSION["email"])) {
     http_response_code(403);
     header('Location: loginPage.html');
     exit;
 }
+
 $price = 0;
-$host = 'localhost';
-$db   = 'zerowaste';
-$user = 'root';
-$pass = '';
-$charset = 'utf8mb4';
-
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-
-$options = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES   => false,
-];
-
-try {
-    $pdo = new PDO($dsn, $user, $pass, $options);
-} catch (\PDOException $e) {
-    throw new \PDOException($e->getMessage(), (int)$e->getCode());
-}
 
 $email = $_SESSION["email"];
 
@@ -39,7 +23,7 @@ if (!$seller_id) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
+
     $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
     $weight = filter_input(INPUT_POST, 'weight', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
     $price = filter_input(INPUT_POST, 'price', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
@@ -52,16 +36,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $donationStatus = false;
 
-    if ($stmt->execute([
-        ':name' => $name,
-        ':weight' => $weight,
-        ':price' => $price,
-        ':image' => $image,
-        ':category' => $category,
-        ':seller_id' => $seller_id,
-        ':is_donation' => $donationStatus,
-    ])) {
-        header("location: seller-home-page-waste.php"); 
+    if (
+        $stmt->execute([
+            ':name' => $name,
+            ':weight' => $weight,
+            ':price' => $price,
+            ':image' => $image,
+            ':category' => $category,
+            ':seller_id' => $seller_id,
+            ':is_donation' => $donationStatus,
+        ])
+    ) {
+        header("location: seller-home-page-waste.php");
     } else {
         echo "Error: Could not add item.";
     }
@@ -69,4 +55,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     http_response_code(405);
     echo "Error: Invalid request method.";
 }
-?>
