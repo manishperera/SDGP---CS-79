@@ -1,21 +1,21 @@
 <?php
 $host = 'localhost';
-$db   = 'zerowaste';
+$db = 'zerowaste';
 $user = 'root';
 $pass = '';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 $options = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES   => false,
+    PDO::ATTR_EMULATE_PREPARES => false,
 ];
 
 try {
     $pdo = new PDO($dsn, $user, $pass, $options);
 } catch (\PDOException $e) {
-    throw new \PDOException($e->getMessage(), (int)$e->getCode());
+    throw new \PDOException($e->getMessage(), (int) $e->getCode());
 }
 
 $email = $_POST['email'];
@@ -33,4 +33,3 @@ if ($new_password === $confirm_password) {
 } else {
     echo "<script>alert('The passwords do not match. Please try again.'); window.location.href = 'loginPage.html';</script>";
 }
-?>
