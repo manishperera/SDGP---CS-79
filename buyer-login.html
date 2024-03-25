@@ -1,64 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Buyer Login</title>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-<style>
-  body, html {
-    height: 100%;
-    margin: 0;
-  }
-  .bg-image {
-    background-image: url('https://img.freepik.com/free-photo/various-vegetables-black-table-with-space-message_1220-616.jpg?w=1060&t=st=1711199448~exp=1711200048~hmac=424d84a0e95ed8649330086f707e23d7e371613e4601947871dc21f5ffc27c64');
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    background-attachment: fixed;
-  }
-  .login-container {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .login-box {
-    background-color: rgba(255, 255, 255, 0.3);
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-</style>
-</head>
-<body>
-
-<div class="bg-image">
-  <div class="login-container">
-    <div class="login-box">
-      <h3 class="text-center mb-4">Step Closer To A Cleaner, Greener Future</h3>
-      <form action="buyer-login.php" method="post">
-        <div class="form-group">
-          <input type="text" class="form-control" id="buyerId" name="buyerId" placeholder="Email/ Phone no." required>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buyer Login</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
+      .bg-image {
+        background-image: url("https://img.freepik.com/free-photo/various-vegetables-black-table-with-space-message_1220-616.jpg?w=1060&t=st=1711199448~exp=1711200048~hmac=424d84a0e95ed8649330086f707e23d7e371613e4601947871dc21f5ffc27c64");
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        background-attachment: fixed;
+      }
+      .login-container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .login-box {
+        background-color: rgba(255, 255, 255, 0.3);
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-image">
+      <div class="login-container">
+        <div class="login-box">
+          <h3 class="text-center mb-4">
+            Step Closer To A Cleaner, Greener Future
+          </h3>
+          <form action="buyer-login.php" method="post">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="buyerId"
+                name="buyerId"
+                placeholder="Email/ Phone no."
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              class="btn btn-success btn-lg btn-block login-button"
+            >
+              Login
+            </button>
+          </form>
+          <p class="text-center mt-3">
+            <a href="forgot-password.html">Forgot Password?</a>
+          </p>
         </div>
-        <div class="form-group">
-          <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
-        </div>
-        <button type="submit" class="btn btn-success btn-lg btn-block login-button">Login</button>
-      </form>
-      <p class="text-center mt-3">
-        <a href="forgot-password.html">Forgot Password?</a>
-      </p>
+      </div>
     </div>
-  </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-<script>
-
-</script>
-</body>
+    <script></script>
+  </body>
 </html>

@@ -1,10 +1,10 @@
-<?php  
+<?php
 
 session_start();
 
+require __DIR__ . '/../../../app/dbConnection.php';
+
 if (isset($_SESSION['username'])) {
-	
-	include '../db.conn.php';
 
 	$id = $_SESSION['user_id'];
 
@@ -14,7 +14,7 @@ if (isset($_SESSION['username'])) {
 	$stmt = $conn->prepare($sql);
 	$stmt->execute([$id]);
 
-}else {
+} else {
 	header("Location: ../../index.php");
 	exit;
 }

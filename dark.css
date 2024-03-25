@@ -1,115 +1,119 @@
-html, body {
-    height: auto;
+html,
+body {
+  height: auto;
 }
 
 html {
-    display: table;
-    margin: auto;
+  display: table;
+  margin: auto;
 }
 
 body {
-    background-color: #000000;
-    font: 12px Consolas, Courier;
-    color: #FFFFFF;
-    padding: 35px;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
+  background-color: #000000;
+  font: 12px Consolas, Courier;
+  color: #ffffff;
+  padding: 35px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
 }
- 
-form, p, span {
-    margin: 0;
-    padding: 0;
+
+form,
+p,
+span {
+  margin: 0;
+  padding: 0;
 }
- 
+
 input {
-    font: 12px Consolas, Courier;
+  font: 12px Consolas, Courier;
 }
- 
+
 a {
-    color: #FF0000;
-    text-decoration: none;
+  color: #ff0000;
+  text-decoration: none;
 }
- 
+
 a:hover {
-	cursor: pointer;
-	text-decoration: underline;
+  cursor: pointer;
+  text-decoration: underline;
 }
- 
-#wrapper,#loginform {
-    margin: 0 auto;
-	margin-top: 3vh;
-	margin-bottom: 3vh;
-    padding-bottom: 25px;
-    text-align: center;
-    background: #202020;
-    width: 50vw;
-    border: 1px solid #474747;
-}
- 
+
+#wrapper,
 #loginform {
-    padding-top: 18px;
+  margin: 0 auto;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  padding-bottom: 25px;
+  text-align: center;
+  background: #202020;
+  width: 50vw;
+  border: 1px solid #474747;
 }
- 
+
+#loginform {
+  padding-top: 18px;
+}
+
 #loginform p {
-    margin: 5px;
+  margin: 5px;
 }
 
 #chatbox {
-    text-align: left;
-    margin: 0 auto;
-    margin-bottom: 25px;
-    padding: 10px;
-    background: #202020;
-    height: 70vh;
-    width: 45vw;
-    border: 1px solid #474747;
-    overflow: auto;
+  text-align: left;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding: 10px;
+  background: #202020;
+  height: 70vh;
+  width: 45vw;
+  border: 1px solid #474747;
+  overflow: auto;
 }
- 
+
 #usermsg {
-    width: 40vw;
-    border: 1px solid #FFFFFF;
+  width: 40vw;
+  border: 1px solid #ffffff;
 }
- 
+
 #submit {
-    width: 60px;
+  width: 60px;
 }
- 
+
 .error {
-    color: #ff0000;
+  color: #ff0000;
 }
- 
+
 #menu {
-    padding: 12.5px 25px 12.5px 25px;
+  padding: 12.5px 25px 12.5px 25px;
 }
- 
+
 .welcome {
-    float: left;
+  float: left;
 }
- 
+
 .logout {
-    float: right;
+  float: right;
 }
- 
+
 .msgln {
-    margin: 0 0 2px 0;
+  margin: 0 0 2px 0;
 }
 
 user {
-    color: #00FF00;
-    font: 15px Consolas, Courier;
-    font-weight: bold;
-    letter-spacing: -1px;
+  color: #00ff00;
+  font: 15px Consolas, Courier;
+  font-weight: bold;
+  letter-spacing: -1px;
 }
 
 alert {
-    text-align: center;
+  text-align: center;
 }
 
 img {
-    text-align: left;
-    vertical-align: top;
-    margin-bottom: 10px;
-    max-width: 20vw;
+  text-align: left;
+  vertical-align: top;
+  margin-bottom: 10px;
+  max-width: 20vw;
 }

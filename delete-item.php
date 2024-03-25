@@ -2,6 +2,8 @@
 
 session_start();
 
+require __DIR__ . '/app/dbConnection.php';
+
 if (!isset($_SESSION["email"])) {
     http_response_code(403);
     exit("Unauthorized");
@@ -19,27 +21,12 @@ if (!isset($_POST["id"])) {
 
 $id = $_POST["id"];
 
-$host = 'localhost';
-$db   = 'zerowaste';
-$user = 'root';
-$pass = '';
-$charset = 'utf8mb4';
-
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-
-$options = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES   => false,
-];
-
 try {
-    $pdo = new PDO($dsn, $user, $pass, $options);
+    $stmt = $pdo->prepare("DELETE FROM waste WHERE id = :id");
+    $stmt->execute(['id' => $id]);
+
+    echo "Item deleted successfully!";
 } catch (\PDOException $e) {
-    throw new \PDOException($e->getMessage(), (int)$e->getCode());
+    error_log($e->getMessage());
+    exit("An error occurred while deleting the item.");
 }
-
-$stmt = $pdo->prepare("DELETE FROM waste WHERE id = :id");
-$stmt->execute(['id' => $id]);
-
-echo "Item deleted successfully!";

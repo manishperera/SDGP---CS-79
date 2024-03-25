@@ -1,55 +1,56 @@
-<?php  
+<?php
 session_start();
 
-if(isset($_POST['username']) &&
-   isset($_POST['password'])){
+require __DIR__ . '/../../../app/dbConnection.php';
 
-   include '../db.conn.php';
-   
-   $password = $_POST['password'];
-   $username = $_POST['username'];
-   
-   if(empty($username)){
-      $em = "Username is required";
+if (
+  isset($_POST['username']) &&
+  isset($_POST['password'])
+) {
 
-      header("Location: ../../index.php?error=$em");
-   }else if(empty($password)){
-      $em = "Password is required";
+  $password = $_POST['password'];
+  $username = $_POST['username'];
 
-      header("Location: ../../index.php?error=$em");
-   }else {
-      $sql  = "SELECT * FROM 
-               users WHERE username=?";
-      $stmt = $conn->prepare($sql);
-      $stmt->execute([$username]);
+  if (empty($username)) {
+    $em = "Username is required";
 
-      if($stmt->rowCount() === 1){
-        $user = $stmt->fetch();
+    header("Location: ../../index.php?error=$em");
+  } else if (empty($password)) {
+    $em = "Password is required";
 
-        if ($user['username'] === $username) {
-           
-          if (password_verify($password, $user['password'])) {
+    header("Location: ../../index.php?error=$em");
+  } else {
+    $sql = "SELECT * FROM users WHERE username=?";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([$username]);
+
+    if ($stmt->rowCount() === 1) {
+      $user = $stmt->fetch();
+
+      if ($user['username'] === $username) {
+
+        if (password_verify($password, $user['password'])) {
 
 
-            $_SESSION['username'] = $user['username'];
-            $_SESSION['name'] = $user['name'];
-            $_SESSION['user_id'] = $user['user_id'];
+          $_SESSION['username'] = $user['username'];
+          $_SESSION['name'] = $user['name'];
+          $_SESSION['user_id'] = $user['user_id'];
 
-            header("Location: ../../home.php");
+          header("Location: ../../home.php");
 
-          }else {
-            $em = "Incorect Username or password";
-
-            header("Location: ../../index.php?error=$em");
-          }
-        }else {
+        } else {
           $em = "Incorect Username or password";
 
           header("Location: ../../index.php?error=$em");
         }
+      } else {
+        $em = "Incorect Username or password";
+
+        header("Location: ../../index.php?error=$em");
       }
-   }
-}else {
+    }
+  }
+} else {
   header("Location: ../../index.php");
   exit;
 }

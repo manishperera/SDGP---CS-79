@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Waste Predictions</title>
 </head>
+
 <body>
     <h1>Waste Predictions</h1>
     <?php
@@ -19,4 +21,5 @@
     }
     ?>
 </body>
+
 </html>

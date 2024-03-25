@@ -1,66 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login Page</title>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-<style>
-  body, html {
-    height: 100%;
-    margin: 0;
-  }
-  .bg-image {
-    height: 100%; 
-    background-image: url('https://cdn.ning.com/wp-content/uploads/2019/05/create-food-website.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .login-container {
-    width: 400px; /* Adjust the width of the container */
-  }
-  .login-box {
-    background-color: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  .login-button {
-    width: 100%;
-    margin-bottom: 16px;
-  }
-  .logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 150px; 
-    height: auto;
-  }
-</style>
-</head>
-<body>
-
-<div class="bg-image">
-  <img src="image/logo.png" alt="ZeroWaste Logo" class="logo">
-  <div class="login-container">
-    <div class="login-box">
-      <h2 class="text-center mb-4">Step Closer to a Cleaner, Geener Future.</h2>
-      <button class="btn btn-success btn-lg btn-block login-button" type="button" onclick="location.href='buyer-login.html'">Buyer Login</button>
-      <button class="btn btn-secondary btn-lg btn-block login-button" type="button" onclick="location.href='seller-login.html'">Seller Login</button>
-      <p class="text-center">
-        Don't Have An Account Already?
-        <a href="signupPage.html">Sign Up</a>
-      </p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
+      .bg-image {
+        height: 100%;
+        background-image: url("https://cdn.ning.com/wp-content/uploads/2019/05/create-food-website.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .login-container {
+        width: 400px; /* Adjust the width of the container */
+      }
+      .login-box {
+        background-color: white;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .login-button {
+        width: 100%;
+        margin-bottom: 16px;
+      }
+      .logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 150px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-image">
+      <img src="image/logo.png" alt="ZeroWaste Logo" class="logo" />
+      <div class="login-container">
+        <div class="login-box">
+          <h2 class="text-center mb-4">
+            Step Closer to a Cleaner, Geener Future.
+          </h2>
+          <button
+            class="btn btn-success btn-lg btn-block login-button"
+            type="button"
+            onclick="location.href='buyer-login.html'"
+          >
+            Buyer Login
+          </button>
+          <button
+            class="btn btn-secondary btn-lg btn-block login-button"
+            type="button"
+            onclick="location.href='seller-login.html'"
+          >
+            Seller Login
+          </button>
+          <p class="text-center">
+            Don't Have An Account Already?
+            <a href="signupPage.html">Sign Up</a>
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
 </html>

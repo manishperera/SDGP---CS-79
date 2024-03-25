@@ -1,14 +1,12 @@
 <?php
 session_start();
 
-if(isset($_SESSION['name'])){
-    if ($_POST ['text'] == "") {
-    }
-	else {
+if (isset($_SESSION['name'])) {
+    if ($_POST['text'] == "") {
+    } else {
         $text = $_POST['text'];
         $fp = fopen("log.html", 'a');
-        fwrite($fp, "<div class='msgln'><span>(".date("g:i A").") <b><user>".$_SESSION['name']."</user></b>: ".stripslashes (htmlspecialchars($text))."<br></span></div>");
+        fwrite($fp, "<div class='msgln'><span>(" . date("g:i A") . ") <b><user>" . $_SESSION['name'] . "</user></b>: " . stripslashes(htmlspecialchars($text)) . "<br></span></div>");
         fclose($fp);
     }
 }
-?>
