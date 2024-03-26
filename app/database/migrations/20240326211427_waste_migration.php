@@ -21,10 +21,10 @@ final class WasteMigration extends AbstractMigration
             ->addColumn('address', 'text', ['null' => true])
             ->addColumn('ratings', 'decimal', ['length' => 3, 'decimals' => 2, 'default' => null])
             ->addColumn('seller_id', 'integer')
-            ->addColumn('is_donation', 'string', ['length' => 6, 'default' => 0])
+            ->addColumn('is_donation', 'string', ['length' => 6, 'default' => '0'])
             ->create();
 
-        $this->table('donations')
+        $this->table('waste')
             ->addIndex('seller_id')
             ->save();
     }
