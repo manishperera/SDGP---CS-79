@@ -6,12 +6,12 @@ use PDOException;
 
 $server = getenv('DB_SERVER');
 $host = getenv('DB_HOST');
+$port = getenv('DB_PORT');
 $dbname = getenv('DB_NAME');
 $user = getenv('DB_USER');
 $password = getenv('DB_PASSWORD');
-$charset = getenv('DB_CHARSET');
 
-$dsn = "$server:host=$host;dbname=$dbname";
+$dsn = "$server:host=$host;port=$port;dbname=$dbname";
 
 $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,

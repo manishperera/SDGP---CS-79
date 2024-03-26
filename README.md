@@ -34,3 +34,21 @@ cp .env.example .env
 ```
 
 And edit the content of `.env` file from deploy script or edit manually.
+
+## Run migrations
+
+Resource: https://github.com/lulco/phoenix
+
+Command structure
+
+Add ` --config=app/configs/phoenix.php` at the end of every command or run commands from that file location
+
+```bash
+php vendor/bin/phoenix {command} --config=app/configs/phoenix.php
+```
+
+create migrations
+
+```bash
+php vendor/bin/phoenix create "Migrations\BuyersMigration" migrations --config=app/configs/phoenix.php
+```
