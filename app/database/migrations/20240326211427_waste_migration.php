@@ -15,7 +15,7 @@ final class WasteMigration extends AbstractMigration
             ->addColumn('weight', 'decimal', ['length' => 10, 'decimals' => 2])
             ->addColumn('price', 'string', ['length' => 100, 'default' => 'donated'])
             ->addColumn('image', 'string', ['length' => 255, 'default' => null])
-            ->addColumn('category', 'enum', ['values' => 'food', 'waste'])
+            ->addColumn('category', 'enum', ['values' => ['food', 'waste']])
             ->addColumn('created_at', 'timestamp')
             ->addColumn('contact', 'string', ['length' => 50, 'default' => null])
             ->addColumn('address', 'text', ['null' => true])

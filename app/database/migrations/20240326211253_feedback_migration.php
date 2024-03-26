@@ -12,8 +12,8 @@ final class FeedbackMigration extends AbstractMigration
     {
         $this->table('feedback')
             ->addColumn('rating', 'integer')
-            ->addColumn('improvements', 'text', ['null' => null])
-            ->addColumn('suggestions', 'text', ['null' => null])
+            ->addColumn('improvements', 'text', ['null' => true])
+            ->addColumn('suggestions', 'text', ['null' => true])
             ->addColumn('created_at', 'timestamp')
             ->create();
     }
