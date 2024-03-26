@@ -1,17 +1,21 @@
 <?php
 
-require __DIR__ . '/env.php';
+$db_configs = require __DIR__ . '/configs/phoenix.php';
 
 use PDOException;
 
-$server = getenv('DB_SERVER');
-$host = getenv('DB_HOST');
-$port = getenv('DB_PORT');
-$dbname = getenv('DB_NAME');
-$user = getenv('DB_USER');
-$password = getenv('DB_PASSWORD');
+$env = $db_configs['default_environment'];
 
-$dsn = "$server:host=$host;port=$port;dbname=$dbname";
+$db = $db_configs['environments'][$env];
+
+$adapter = $db['adapter'];
+$host = $db['host'];
+$port = $db['port'];
+$user = $db['username'];
+$password = $db['password'];
+$dbname = $db['db_name'];
+
+$dsn = "$adapter:host=$host;port=$port;dbname=$dbname";
 
 $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
