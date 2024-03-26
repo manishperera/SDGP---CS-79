@@ -17,7 +17,7 @@ final class UsersMigration extends AbstractMigration
             ->addColumn('username', 'string', ['length' => 255])
             ->addColumn('password', 'string', ['length' => 1000])
             ->addColumn('p_p', 'string', ['length' => 255, 'default' => 'user-default.png'])
-            ->addColumn('last_seen', 'datetime')
+            ->addColumn('last_seen', 'datetime', ['default' => 'CURRENT_TIMESTAMP'])
             ->create();
     }
 

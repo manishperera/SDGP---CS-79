@@ -17,7 +17,7 @@ final class ChatsMigration extends AbstractMigration
             ->addColumn('to_id', 'integer')
             ->addColumn('message', 'text')
             ->addColumn('opened', 'boolean', ['default' => 0])
-            ->addColumn('created_at', 'datetime')
+            ->addColumn('created_at', 'datetime', ['default' => 'CURRENT_TIMESTAMP'])
             ->create();
     }
 

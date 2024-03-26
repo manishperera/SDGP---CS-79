@@ -17,7 +17,7 @@ final class SellersMigration extends AbstractMigration
             ->addColumn('address', 'text')
             ->addColumn('password', 'string', ['length' => 255])
             ->addColumn('business_type', 'enum', ['values' => ['Restaurant', 'Hotel', 'Grocery Stores', 'House/Resident']])
-            ->addColumn('created_at', 'timestamp')
+            ->addColumn('created_at', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
             ->create();
     }
 

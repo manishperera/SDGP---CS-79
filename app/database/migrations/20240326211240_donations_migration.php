@@ -16,7 +16,7 @@ final class DonationsMigration extends AbstractMigration
             ->addColumn('category', 'string', ['length' => 50])
             ->addColumn('image', 'string', ['length' => 255, 'default' => null])
             ->addColumn('seller_id', 'integer', ['default' => null])
-            ->addColumn('created_at', 'timestamp')
+            ->addColumn('created_at', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
             ->create();
 
         $this->table('donations')

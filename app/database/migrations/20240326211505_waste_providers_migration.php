@@ -17,7 +17,7 @@ final class WasteProvidersMigration extends AbstractMigration
             ->addColumn('efficiency', 'integer', ['default' => null])
             ->addColumn('image', 'string', ['length' => 255, 'default' => null])
             ->addColumn('details', 'text')
-            ->addColumn('created_at', 'timestamp')
+            ->addColumn('created_at', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
             ->create();
     }
 

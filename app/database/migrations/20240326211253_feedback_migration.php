@@ -14,7 +14,7 @@ final class FeedbackMigration extends AbstractMigration
             ->addColumn('rating', 'integer')
             ->addColumn('improvements', 'text', ['null' => true])
             ->addColumn('suggestions', 'text', ['null' => true])
-            ->addColumn('created_at', 'timestamp')
+            ->addColumn('created_at', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
             ->create();
     }
 

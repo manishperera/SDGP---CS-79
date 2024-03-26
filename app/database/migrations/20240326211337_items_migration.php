@@ -13,7 +13,7 @@ final class ItemsMigration extends AbstractMigration
         $this->table('items')
             ->addColumn('weight', 'string', ['length' => 255, 'default' => null])
             ->addColumn('price', 'string', ['length' => 255, 'default' => null])
-            ->addColumn('created_at', 'timestamp')
+            ->addColumn('created_at', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
             ->create();
     }
 

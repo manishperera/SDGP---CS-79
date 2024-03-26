@@ -14,7 +14,7 @@ final class ChatMessagesMigration extends AbstractMigration
             ->addColumn('sender_id', 'integer')
             ->addColumn('receiver_id', 'integer')
             ->addColumn('message', 'text')
-            ->addColumn('timestamp', 'timestamp')
+            ->addColumn('timestamp', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
             ->create();
     }
 

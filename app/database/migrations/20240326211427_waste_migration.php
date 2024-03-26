@@ -16,12 +16,12 @@ final class WasteMigration extends AbstractMigration
             ->addColumn('price', 'string', ['length' => 100, 'default' => 'donated'])
             ->addColumn('image', 'string', ['length' => 255, 'default' => null])
             ->addColumn('category', 'enum', ['values' => ['food', 'waste']])
-            ->addColumn('created_at', 'timestamp')
             ->addColumn('contact', 'string', ['length' => 50, 'default' => null])
             ->addColumn('address', 'text', ['null' => true])
             ->addColumn('ratings', 'decimal', ['length' => 3, 'decimals' => 2, 'default' => null])
             ->addColumn('seller_id', 'integer')
             ->addColumn('is_donation', 'string', ['length' => 6, 'default' => '0'])
+            ->addColumn('created_at', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
             ->create();
 
         $this->table('waste')
