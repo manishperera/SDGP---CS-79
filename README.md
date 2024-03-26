@@ -33,6 +33,12 @@ composer install --no-dev --optimize-autoloader
 cp .env.example .env
 ```
 
+3. Run migrations
+
+```bash
+php vendor/bin/phoenix migrate --config=app/configs/phoenix.php
+```
+
 And edit the content of `.env` file from deploy script or edit manually.
 
 ## Run migrations
@@ -51,4 +57,10 @@ create migrations
 
 ```bash
 php vendor/bin/phoenix create "Migrations\BuyersMigration" migrations --config=app/configs/phoenix.php
+```
+
+Run migrations
+
+```bash
+php vendor/bin/phoenix migrate --config=app/configs/phoenix.php
 ```
