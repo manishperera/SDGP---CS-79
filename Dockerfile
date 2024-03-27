@@ -19,4 +19,5 @@ RUN echo 'APP_ENV=local\nDB_HOST=ep-plain-dust-a2execv7.eu-central-1.pg.koyeb.ap
 RUN composer install
 
 # Run migration command
-RUN php vendor/lulco/phoenix/bin/phoenix migrate --config=app/configs/phoenix.php
+RUN php vendor/bin/phoenix migrate --config=app/configs/phoenix.php
+
