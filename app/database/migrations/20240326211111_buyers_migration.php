@@ -17,8 +17,8 @@ final class BuyersMigration extends AbstractMigration
             ->addColumn('user_name', 'string', ['length' => 150])
             ->addColumn('phone_number', 'string', ['length' => 15])
             ->addColumn('password', 'string', ['length' => 150])
-            ->addColumn('created_at', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
             ->addColumn('reset_code', 'string', ['length' => 16])
+            ->addColumn('created_at', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
             ->create();
 
         $this->table('buyers')
