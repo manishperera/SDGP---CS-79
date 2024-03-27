@@ -20,7 +20,7 @@
       "php vendor/bin/phoenix migrate --config=app/configs/phoenix.php"
     ],
     "generate_env": [
-      "cp .env.${APP_ENV} .env"
+      "cp .env.production .env"
     ]
   }
 }
