@@ -11,8 +11,7 @@ final class ChatsMigration extends AbstractMigration
 {
     protected function up(): void
     {
-        $this->table('chats')
-            ->addPrimaryColumns([new Column('chat_id', 'integer', ['autoincrement' => true])])
+        $this->table('chats', new Column('chat_id', 'integer', ['autoincrement' => true]))
             ->addColumn('from_id', 'integer')
             ->addColumn('to_id', 'integer')
             ->addColumn('message', 'text')

@@ -11,8 +11,7 @@ final class UsersMigration extends AbstractMigration
 {
     protected function up(): void
     {
-        $this->table('users')
-            ->addPrimaryColumns([new Column('user_id', 'integer', ['autoincrement' => true])])
+        $this->table('users', new Column('user_id', 'integer', ['autoincrement' => true]))
             ->addColumn('name', 'string', ['length' => 255])
             ->addColumn('username', 'string', ['length' => 255])
             ->addColumn('password', 'string', ['length' => 1000])
