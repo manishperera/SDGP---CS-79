@@ -11,7 +11,7 @@ return [
         'local' => [
             'adapter' => 'mysql',
             'host' => getenv('DB_HOST') ?? 'localhost',
-            # 'port' => getenv('DB_PORT') ?? 3306, // optional
+            'port' => getenv('DB_PORT') ?? 3306, // optional
             'username' => getenv('DB_USER') ?? 'root',
             'password' => getenv('DB_PASSWORD') ?? '',
             'db_name' => getenv('DB_NAME') ?? 'zerowaste',
@@ -21,7 +21,7 @@ return [
         'production' => [
             'adapter' => 'pgsql',
             'host' => getenv('DB_HOST') ?? 'localhost',
-            # 'port' => getenv('DB_PORT') ?? 5432, // optional
+            'port' => getenv('DB_PORT') ?? 5432, // optional
             'username' => getenv('DB_USER') ?? 'root',
             'password' => getenv('DB_PASSWORD') ?? '',
             'db_name' => getenv('DB_NAME') ?? 'zerowaste',
