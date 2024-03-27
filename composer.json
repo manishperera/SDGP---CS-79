@@ -9,12 +9,12 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "@migrate",
-      "@generate_env"
+      "@generate_env",
+      "@migrate"
     ],
     "post-update-cmd": [
-      "@migrate",
-      "@generate_env"
+      "@generate_env",
+      "@migrate"
     ],
     "migrate": [
       "php vendor/bin/phoenix migrate --config=app/configs/phoenix.php"
