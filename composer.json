@@ -3,24 +3,5 @@
     "phpmailer/phpmailer": "^6.9",
     "vlucas/phpdotenv": "^5.6",
     "lulco/phoenix": "^2.5"
-  },
-  "extra": {
-    "APP_ENV": "production"
-  },
-  "scripts": {
-    "post-install-cmd": [
-      "@generate_env",
-      "@migrate"
-    ],
-    "post-update-cmd": [
-      "@generate_env",
-      "@migrate"
-    ],
-    "migrate": [
-      "php vendor/bin/phoenix migrate --config=app/configs/phoenix.php"
-    ],
-    "generate_env": [
-      "cp .env.production .env"
-    ]
   }
 }
