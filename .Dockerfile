@@ -1,9 +1,6 @@
 # Use a PHP base image
 FROM php:latest
 
-# Set working directory
-WORKDIR /app
-
 # Copy project files
 COPY . .
 
