@@ -14,9 +14,9 @@ return [
             'port' => getenv('DB_PORT') ?? 3306, // optional
             'username' => getenv('DB_USER') ?? 'root',
             'password' => getenv('DB_PASSWORD') ?? '',
-            'db_name' => getenv('DB_NAME') ?? 'SDGP',
+            'db_name' => getenv('DB_NAME') ?? 'zerowaste',
             'charset' => getenv('DB_CHARSET') ?? 'utf8mb4',
-            'collation' => getenv('DB_COLLATION') ?? 'utf8mb4_general_ci', // optional, if not set default collation for utf8mb4 is used
+            # 'collation' => getenv('DB_COLLATION') ?? 'utf8mb4_general_ci', // optional, if not set default collation for utf8mb4 is used
         ],
         'production' => [
             'adapter' => 'pgsql',
@@ -24,9 +24,9 @@ return [
             'port' => getenv('DB_PORT') ?? 5432, // optional
             'username' => getenv('DB_USER') ?? 'root',
             'password' => getenv('DB_PASSWORD') ?? '',
-            'db_name' => getenv('DB_NAME') ?? 'SDGP',
-            'charset' => getenv('DB_CHARSET') ?? 'utf8mb4',
-            'collation' => getenv('DB_COLLATION') ?? 'utf8mb4_general_ci', // optional, if not set default collation for utf8mb4 is used
+            'db_name' => getenv('DB_NAME') ?? 'zerowaste',
+            'charset' => getenv('DB_CHARSET') ?? 'utf8',
+            # 'collation' => getenv('DB_COLLATION') ?? 'utf8mb4_general_ci', // optional, if not set default collation for utf8mb4 is used
         ],
     ],
     'default_environment' => getenv('APP_ENV') ?? 'local',
